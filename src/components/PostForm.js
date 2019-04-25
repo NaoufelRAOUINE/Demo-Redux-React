@@ -17,14 +17,15 @@ class PostForm extends Component {
   }
   onSubmit(e){
     e.preventDefault();
-    const post={
-      title: this.state.title,
-      body: this.state.body
-    }
+    // const post={
+    //   title: this.state.title,
+    //   body: this.state.body
+    // }
     Axios.post("https://jsonplaceholder.typicode.com/posts",
-    JSON.stringify(post)).then(res => console.log(res.data));
-      // this.setState({posts:
-      // [...this.state.posts, res.data]}));
+    {title: this.state.title,
+      body: this.state.body}).then(res => 
+        console.log(res.data));
+      // this.setState({posts: [...this.state.posts, res.data]}));
   }
   render() {
     return (
