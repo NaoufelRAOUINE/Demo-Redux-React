@@ -4,9 +4,10 @@ import './App.css';
 import Posts from './components/Posts';
 import PostForm from './components/PostForm';
 import {Provider} from 'react-redux';
-import { createStore, applyMiddleware } from 'redux';
+import store from "./store";
+// import { createStore, applyMiddleware } from 'redux';
 
-const store = createStore(()=>[],{},applyMiddleware());
+//const store = createStore(()=>[],{},applyMiddleware());
 class App extends Component {
   render(){
     return (
@@ -14,7 +15,7 @@ class App extends Component {
         <div className="App">
           <header className="App-header">
             <img src={logo} className="App-logo" alt="logo" />
-            <h1 className="App-title">Learn React</h1>
+            <h1 className="App-title">My Posts</h1>
           </header>
           <PostForm />
           <hr/>
